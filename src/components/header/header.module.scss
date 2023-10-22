@@ -1,0 +1,101 @@
+$sm: 578px;
+$md: 769px;
+$lg: 993px;
+$xl: 1201px;
+$xxl: 1401px;  
+$xxxl:1601px;
+
+header{
+    width: 100%;
+    height: 100%;
+    .nav_bg{
+        width: 100%;
+        height: 8vh;
+        background-color: rgb(24, 39, 68);
+        nav{
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            .logo{
+                font-size: 24px;
+                color: rgb(234, 201, 34);
+            }
+            .pc_nav{
+                display: flex;
+                align-items: center;
+                gap: 20px;
+                font-size: 22px;
+                font-weight: 600;
+                @media (max-width:$md) {
+                    display: none;
+                }
+                li>a{
+                    color: rgb(234, 201, 34);
+                }
+            }
+            .hamburger{
+                display: none;
+                svg{
+                    stroke: rgb(234, 201, 34);
+                }
+                @media (max-width:$md) {
+                    display: block;
+                }
+            }
+        }
+        .mobile_nav{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            .navlinks_wrapper{
+                width: 100%;
+                padding: 20px;
+                padding-bottom: 50px;
+                background-color: rgb(24, 39, 68);
+                .exit{
+                    display: flex;
+                    align-items: center;
+                    justify-content: end;
+                    color:rgb(234, 201, 34);
+                }
+                ul{
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    gap: 20px;
+                    li>a{
+                        color: rgb(234, 201, 34);
+                    }
+                }
+            }
+            
+        }
+    }
+    .header_bg{
+        width: 100%;
+        height: 70vh;
+        background: url('public/headerbg.jpg') no-repeat ;
+        background-size: cover;
+        .welcome_text{
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 30px;
+            @media (max-width:$sm) {
+                font-size: 22px;
+            }
+            h1{
+                padding: 20px;
+                color: white;
+                background: rgba($color: #000000, $alpha: .3);
+                
+            }
+        }
+    }
+}
