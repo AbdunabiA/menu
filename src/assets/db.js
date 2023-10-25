@@ -3,22 +3,27 @@ import image from './images/headerbg.jpg'
 export const menu = [
   {
     id: 1,
-    name: "Category",
-    products: [
+    name_uz: "Category",
+    name_ru: "Category ru",
+    image,
+    foods: [
       {
-        name: "food",
+        name_uz: "food",
+        name_ru: "food ru",
         price: 150000,
         comment: "Lorem ipsum dolor sit amet consectetur.",
         image,
       },
       {
-        name: "food",
+        name_uz: "food",
+        name_ru: "food ru",
         price: 150000,
         comment: "Lorem ipsum dolor sit amet consectetur.",
         image,
       },
       {
-        name: "food",
+        name_uz: "food",
+        name_ru: "food ru",
         price: 150000,
         comment: "Lorem ipsum dolor sit amet consectetur.",
         image,
@@ -27,22 +32,27 @@ export const menu = [
   },
   {
     id: 2,
-    name: "Category2",
-    products: [
+    name_uz: "Category2",
+    name_ru: "Category2 ru",
+    image,
+    foods: [
       {
-        name: "food",
+        name_uz: "food",
+        name_ru: "food ru",
         price: 150000,
         comment: "Lorem ipsum dolor sit amet consectetur.",
         image,
       },
       {
-        name: "food",
+        name_uz: "food",
+        name_ru: "food ru",
         price: 150000,
         comment: "Lorem ipsum dolor sit amet consectetur.",
         image,
       },
       {
-        name: "food",
+        name_uz: "food",
+        name_ru: "food ru",
         price: 150000,
         comment: "Lorem ipsum dolor sit amet consectetur.",
         image,
@@ -51,22 +61,27 @@ export const menu = [
   },
   {
     id: 3,
-    name: "Category3",
-    products: [
+    name_uz: "Category3",
+    name_ru: "Category3 ru",
+    image,
+    foods: [
       {
-        name: "food",
+        name_uz: "food",
+        name_ru: "food ru",
         price: 150000,
         comment: "Lorem ipsum dolor sit amet consectetur.",
         image,
       },
       {
-        name: "food",
+        name_uz: "food",
+        name_ru: "food ru",
         price: 150000,
         comment: "Lorem ipsum dolor sit amet consectetur.",
         image,
       },
       {
-        name: "food",
+        name_uz: "food",
+        name_ru: "food ru",
         price: 150000,
         comment: "Lorem ipsum dolor sit amet consectetur.",
         image,
@@ -75,22 +90,27 @@ export const menu = [
   },
   {
     id: 4,
-    name: "Category4",
-    products: [
+    name_uz: "Category4",
+    name_ru: "Category4 ru",
+    image,
+    foods: [
       {
-        name: "food",
+        name_uz: "food",
+        name_ru: "food ru",
         price: 150000,
         comment: "Lorem ipsum dolor sit amet consectetur.",
         image,
       },
       {
-        name: "food",
+        name_uz: "food",
+        name_ru: "food ru",
         price: 150000,
         comment: "Lorem ipsum dolor sit amet consectetur.",
         image,
       },
       {
-        name: "food",
+        name_uz: "food",
+        name_ru: "food ru",
         price: 150000,
         comment: "Lorem ipsum dolor sit amet consectetur.",
         image,
@@ -99,22 +119,27 @@ export const menu = [
   },
   {
     id: 5,
-    name: "Category5",
-    products: [
+    name_uz: "Category5",
+    name_ru: "Category5 ru",
+    image,
+    foods: [
       {
-        name: "food",
+        name_uz: "food",
+        name_ru: "food ru",
         price: 150000,
         comment: "Lorem ipsum dolor sit amet consectetur.",
         image,
       },
       {
-        name: "food",
+        name_uz: "food",
+        name_ru: "food ru",
         price: 150000,
         comment: "Lorem ipsum dolor sit amet consectetur.",
         image,
       },
       {
-        name: "food",
+        name_uz: "food",
+        name_ru: "food ru",
         price: 150000,
         comment: "Lorem ipsum dolor sit amet consectetur.",
         image,
@@ -123,22 +148,27 @@ export const menu = [
   },
   {
     id: 6,
-    name: "Category6",
-    products: [
+    name_uz: "Category6",
+    name_ru: "Category6 ru",
+    image,
+    foods: [
       {
-        name: "food",
+        name_uz: "food",
+        name_ru: "food ru",
         price: 150000,
         comment: "Lorem ipsum dolor sit amet consectetur.",
         image,
       },
       {
-        name: "food",
+        name_uz: "food",
+        name_ru: "food ru",
         price: 150000,
         comment: "Lorem ipsum dolor sit amet consectetur.",
         image,
       },
       {
-        name: "food",
+        name_uz: "food",
+        name_ru: "food ru",
         price: 150000,
         comment: "Lorem ipsum dolor sit amet consectetur.",
         image,
@@ -147,22 +177,27 @@ export const menu = [
   },
   {
     id: 7,
-    name: "Category7",
-    products: [
+    name_uz: "Category7",
+    name_ru: "Category7 ru",
+    image,
+    foods: [
       {
-        name: "food",
+        name_uz: "food",
+        name_ru: "food ru",
         price: 150000,
         comment: "Lorem ipsum dolor sit amet consectetur.",
         image,
       },
       {
-        name: "food",
+        name_uz: "food",
+        name_ru: "food ru",
         price: 150000,
         comment: "Lorem ipsum dolor sit amet consectetur.",
         image,
       },
       {
-        name: "food",
+        name_uz: "food",
+        name_ru: "food ru",
         price: 150000,
         comment: "Lorem ipsum dolor sit amet consectetur.",
         image,
@@ -171,22 +206,27 @@ export const menu = [
   },
   {
     id: 8,
-    name: "Categor8",
-    products: [
+    name_uz: "Categor8",
+    name_ru: "Categor8 ru",
+    image,
+    foods: [
       {
-        name: "food",
+        name_uz: "food",
+        name_ru: "food ru",
         price: 150000,
         comment: "Lorem ipsum dolor sit amet consectetur.",
         image,
       },
       {
-        name: "food",
+        name_uz: "food",
+        name_ru: "food ru",
         price: 150000,
         comment: "Lorem ipsum dolor sit amet consectetur.",
         image,
       },
       {
-        name: "food",
+        name_uz: "food",
+        name_ru: "food ru",
         price: 150000,
         comment: "Lorem ipsum dolor sit amet consectetur.",
         image,

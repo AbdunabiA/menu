@@ -34,6 +34,10 @@ header{
                 li>a{
                     color: rgb(234, 201, 34);
                 }
+                li{
+                    color: rgb(234, 201, 34);
+                    cursor: pointer;
+                }
             }
             .hamburger{
                 display: none;
@@ -70,6 +74,10 @@ header{
                     li>a{
                         color: rgb(234, 201, 34);
                     }
+                    li{
+                        color: rgb(234, 201, 34);
+                        cursor: pointer;
+                    }
                 }
             }
             
@@ -98,4 +106,7 @@ header{
             }
         }
     }
+}
+.low_opacity{
+    opacity: .5;
 }

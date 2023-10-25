@@ -1,9 +1,11 @@
 import BurgerMenu from "assets/icons/burgerMenu";
 import s from "./header.module.scss";
 import { useState } from "react";
+import { useTranslation } from "react-i18next";
 
 const Header = () => {
   const [nav, setNav] = useState(false);
+  const { i18n } = useTranslation();
   return (
     <header>
       <div className={s.nav_bg}>
@@ -34,6 +36,22 @@ const Header = () => {
                 <li>
                   <a href="#location">Наша локация</a>
                 </li>
+                <li>
+                  <p
+                    className={i18n.language === "ru" ? s.low_opacity : null}
+                    onClick={() => i18n.changeLanguage("uz")}
+                  >
+                    UZ
+                  </p>
+                </li>
+                <li>
+                  <p
+                    className={i18n.language === "uz" ? s.low_opacity : null}
+                    onClick={() => i18n.changeLanguage("ru")}
+                  >
+                    RU
+                  </p>
+                </li>
               </ul>
             </div>
           </div>
@@ -58,6 +76,22 @@ const Header = () => {
               </li>
               <li>
                 <a href="#location">Наша локация</a>
+              </li>
+              <li>
+                <p
+                  className={i18n.language === "ru" ? s.low_opacity : null}
+                  onClick={() => i18n.changeLanguage("uz")}
+                >
+                  UZ
+                </p>
+              </li>
+              <li>
+                <p
+                  className={i18n.language === "uz" ? s.low_opacity : null}
+                  onClick={() => i18n.changeLanguage("ru")}
+                >
+                  RU
+                </p>
               </li>
             </ul>
           </nav>
