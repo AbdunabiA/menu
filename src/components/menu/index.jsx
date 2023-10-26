@@ -4,36 +4,44 @@ import { menu } from "assets/db";
 import { useTranslation } from "react-i18next";
 
 const Menu = () => {
-  console.log(menu);
+  // console.log(menu);
   const {i18n, t} = useTranslation() 
   const [category, setCategory] = useState(null)
-  // const [loading, setLoading] = useState(false)
-  // const [data, setData] = useState(null)
-  // const [error, setError] = useState(null)
-  // useEffect(()=>{
-  //   setLoading(true)
-  //   const getData = async (url) => {
-  //     try{
-  //       const response = await fetch(url)
-  //       const data = response.json()
-  //       setData(data)
-  //     }catch(error){
-  //       setError(error)
-  //     }finally{
-  //       setLoading(false)
-  //     }
-  //   }
-  //   getData("https://sitemenu.pythonanywhere.com/categories");
-  // },[])
-  // if(loading) return <p>Loading...</p>
-  // if(error) return <p>{error?.message}</p>
-  // console.log(data);
+  const [loading, setLoading] = useState(false)
+  const [data, setData] = useState([])
+  const [error, setError] = useState(null)
+  useEffect(()=>{
+    setLoading(true)
+    const getData = async (url) => {
+      try{
+        const response = await fetch(url)
+        const data = await response.json()
+        setData(data)
+      }catch(error){
+        setError(error)
+      }finally{
+        setLoading(false)
+      }
+    }
+    getData("https://sitemenu.pythonanywhere.com/categories");
+  },[])
+  useEffect(() => {
+    if (category) {
+      const firstProduct = document.getElementById(`first-product-${category}`);
+      if (firstProduct) {
+        firstProduct.scrollIntoView({ behavior: "smooth" });
+      }
+    }
+  }, [category]);
+  if(loading) return <p>Loading...</p>
+  if(error) return <p>{error?.message}</p>
+  console.log(data);
   return (
     <div className="container">
       <div className={s.menu_wrapper}>
         <h1>{t("Menyu")}</h1>
         <div className={s.categories}>
-          {menu.map((el, i) => {
+          {data?.map((el, i) => {
             return (
               <div key={i}>
                 <div
@@ -50,7 +58,10 @@ const Menu = () => {
                   }
                 >
                   <div className={s.category_image}>
-                    <img src={el.image} alt="" />
+                    <img
+                      src={el.photo}
+                      alt=""
+                    />
                   </div>
                   <div className={s.category_content}>
                     <h2 className={s.category_name}>
@@ -65,14 +76,25 @@ const Menu = () => {
                 >
                   {el.foods.map((el, index) => {
                     return (
-                      <div key={index} className={s.product}>
+                      <div
+                        key={index}
+                        className={s.product}
+                        id={index === 0 ? `first-product-${el.id}` : null}
+                      >
                         <div className={s.product__image}>
-                          <img src={el.image} alt="" />
+                          <img
+                            src={`https://sitemenu.pythonanywhere.com${el.photo}`}
+                            alt=""
+                          />
                         </div>
                         <div className={s.product__infos}>
-                          <h3 className={s.product__name}>{el.name_uz}</h3>
+                          <h3 className={s.product__name}>
+                            {el[`name_${i18n.language}`]}
+                          </h3>
                           <p className={s.product__price}>{el.price}</p>
-                          <p className={s.product__comment}>{el.comment}</p>
+                          <p className={s.product__comment}>
+                            {el[`about_${i18n.language}`]}
+                          </p>
                         </div>
                       </div>
                     );

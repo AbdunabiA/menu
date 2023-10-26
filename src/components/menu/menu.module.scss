@@ -79,17 +79,20 @@ $xxxxl:1920px;
             max-height: 0px;
             overflow: hidden;
             transition: all .5s;
+            width: 80%;
+            margin: 0 auto;
             display: flex;
             flex-direction: column;
             gap: 20px;
         }
         .products_open{
-            max-height: 2000px;
+            max-height: 100000px;
             transition: all .5s;
-            margin-top: 20px;
             display: flex;
             flex-direction: column;
+            margin: 20px auto 0 auto;
             gap: 20px;
+            width: 80%;
         }
         .product{
             display: flex;
