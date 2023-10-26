@@ -41,45 +41,46 @@ const Menu = () => {
       <div className={s.menu_wrapper}>
         <h1>{t("Menyu")}</h1>
         <div className={s.categories}>
-          {data?.map((el, i) => {
+          {data?.map((categor, i) => {
             return (
               <div key={i}>
                 <div
                   onClick={() => {
                     setCategory((prev) => {
-                      if (prev === el.id) return null;
-                      return el.id;
+                      if (prev === categor.id) return null;
+                      return categor.id;
                     });
                   }}
                   className={
-                    el.id !== category
+                    categor.id !== category
                       ? s.category_card
                       : s.category_card_selected
                   }
                 >
                   <div className={s.category_image}>
                     <img
-                      src={el.photo}
+                      src={categor.photo}
                       alt=""
                     />
                   </div>
                   <div className={s.category_content}>
                     <h2 className={s.category_name}>
-                      {el[`name_${i18n.language}`]}
+                      {categor[`name_${i18n.language}`]}
                     </h2>
                   </div>
                 </div>
                 <div
                   className={
-                    el.id !== category ? s.products_closed : s.products_open
+                    categor.id !== category ? s.products_closed : s.products_open
                   }
                 >
-                  {el.foods.map((el, index) => {
+                  {categor.foods.map((el, index) => {
+                    // console.log(el.name_uz, index);
                     return (
                       <div
                         key={index}
                         className={s.product}
-                        id={index === 0 ? `first-product-${el.id}` : null}
+                        id={index === 0 ? `first-product-${categor.id}` : null}
                       >
                         <div className={s.product__image}>
                           <img
