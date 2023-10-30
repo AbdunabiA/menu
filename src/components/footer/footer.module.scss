@@ -1,0 +1,37 @@
+footer{
+    background-color: rgb(24, 39, 68);
+    padding: 20px 0px;
+    .footer_wrapper{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        .right{
+            display: flex;
+            gap: 30px;
+            .icon{
+                border: 1px solid #fc5553;
+                border-radius: 50%;
+                padding: 10px;
+                // width: 50px;
+                // height: 50px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                transition: all .3s;
+                &:hover{
+                    background-color: #fc5553;
+                    svg{
+                        fill: rgb(24, 39, 68);
+                    }
+                }
+                svg{
+                    fill: #fc5553;
+                    transition: all .3s;
+                }
+            }
+        }
+    }
+    // svg{
+    //     fill: #fc5553;
+    // }
+}

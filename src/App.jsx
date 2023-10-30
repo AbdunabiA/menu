@@ -1,6 +1,8 @@
 import Menu from "components/menu"
 import Header from "components/header"
 import { useTranslation } from "react-i18next";
+import Location from "components/location";
+import Footer from "components/footer";
 
 
 function App() {
@@ -14,7 +16,9 @@ function App() {
       <Header/>
       <main>
         <Menu/>
+        <Location/>
       </main>
+      <Footer/>
     </>
   )
 }

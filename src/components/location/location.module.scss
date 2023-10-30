@@ -1,0 +1,18 @@
+.location_wrapper {
+  width: 100%;
+  background-color: rgb(24, 39, 68);
+  padding: 50px 0px;
+  margin-top: 40px;
+  h2 {
+    text-align: center;
+    margin: 20px 0px;
+    color: #fc5553;
+    font-size: 28px;
+  }
+  .map {
+    width: 100%;
+    & > iframe {
+      width: 100%;
+    }
+  }
+}

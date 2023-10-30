@@ -2,6 +2,7 @@ import BurgerMenu from "assets/icons/burgerMenu";
 import s from "./header.module.scss";
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
+import logo from 'assets/images/logo.png'
 
 const Header = () => {
   const [nav, setNav] = useState(false);
@@ -59,7 +60,7 @@ const Header = () => {
         <div className="container">
           <nav>
             <div className={s.logo}>
-              <h1>Logo</h1>
+                <img src={logo} alt="" />
             </div>
             <div className={s.hamburger} onClick={() => setNav(true)}>
               <BurgerMenu width={25} height={25} />
