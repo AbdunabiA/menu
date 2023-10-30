@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import s from "./menu.module.scss";
 import { menu } from "assets/db";
 import { useTranslation } from "react-i18next";
+import Loader from "components/loader";
 
 const Menu = () => {
   // console.log(menu);
@@ -33,7 +34,7 @@ const Menu = () => {
       }
     }
   }, [category]);
-  if(loading) return <p>Loading...</p>
+  if(loading) return <Loader/>
   if(error) return <p>{error?.message}</p>
   console.log(data);
   return (
