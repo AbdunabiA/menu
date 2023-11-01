@@ -23,6 +23,7 @@ header {
       justify-content: space-between;
       .logo {
         height: 80%;
+        cursor: pointer;
       }
       .pc_nav {
         display: flex;
@@ -62,6 +63,8 @@ header {
         padding: 20px;
         padding-bottom: 50px;
         background-color: rgb(24, 39, 68);
+        position: relative;
+        z-index: 10;
         .exit {
           display: flex;
           align-items: center;
@@ -87,22 +90,23 @@ header {
   .header_bg {
     width: 100%;
     height: 70vh;
-    background: url("/headerbg.jpg") no-repeat;
+    background: url("/cake-shop.jpg") no-repeat;
     background-size: cover;
+    background-attachment: fixed;
     .welcome_text {
       width: 100%;
       height: 100%;
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 30px;
+      font-size: 28px;
       @media (max-width: $sm) {
         font-size: 22px;
       }
       h1 {
         padding: 20px;
-        color: white;
-        background: rgba($color: #000000, $alpha: 0.3);
+        color: rgb(234, 231, 231);
+        background: rgba($color: #000000, $alpha: 0.4);
       }
     }
   }

@@ -3,6 +3,7 @@ import s from "./menu.module.scss";
 import { menu } from "assets/db";
 import { useTranslation } from "react-i18next";
 import Loader from "components/loader";
+import { motion } from "framer-motion";
 
 const Menu = () => {
   // console.log(menu);
@@ -44,8 +45,12 @@ const Menu = () => {
         <div className={s.categories}>
           {data?.map((categor, i) => {
             return (
-              <div key={i}>
-                <div
+              <motion.div
+                initial={{ y: 100, opacity: 0 }}
+                whileInView={{ y: 0, opacity: 1 }}
+                key={i}
+              >
+                <motion.div
                   onClick={() => {
                     setCategory((prev) => {
                       if (prev === categor.id) return null;
@@ -59,20 +64,19 @@ const Menu = () => {
                   }
                 >
                   <div className={s.category_image}>
-                    <img
-                      src={categor.photo}
-                      alt=""
-                    />
+                    <img src={categor.photo} alt="" />
                   </div>
                   <div className={s.category_content}>
                     <h2 className={s.category_name}>
                       {categor[`name_${i18n.language}`]}
                     </h2>
                   </div>
-                </div>
+                </motion.div>
                 <div
                   className={
-                    categor.id !== category ? s.products_closed : s.products_open
+                    categor.id !== category
+                      ? s.products_closed
+                      : s.products_open
                   }
                 >
                   {categor.foods.map((el, index) => {
@@ -102,7 +106,7 @@ const Menu = () => {
                     );
                   })}
                 </div>
-              </div>
+              </motion.div>
             );
           })}
         </div>

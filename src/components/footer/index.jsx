@@ -13,10 +13,10 @@ const Footer = () => {
           </div>
           <div className={s.right}>
             <a href="https://t.me/tanhocake_uz" className={s.icon}>
-              <Telegram w={"30"} h={"30"} />
+              <Telegram w={"25"} h={"25"} />
             </a>
             <a href="https://www.instagram.com/tanhocakeuz/" className={s.icon}>
-              <Instagram w={"30"} h={"30"} />
+              <Instagram w={"25"} h={"25"} />
             </a>
           </div>
         </div>
