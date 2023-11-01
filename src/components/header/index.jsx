@@ -54,7 +54,7 @@ const Header = () => {
                 transition={{}}
                 
               >
-                <AnimatePresence mode="wait">
+              
                   <motion.li key={1} variants={item} >
                     <a href="#main">{t("Asosiy")}</a>
                   </motion.li>
@@ -83,7 +83,7 @@ const Header = () => {
                       RU
                     </p>
                   </motion.li>
-                </AnimatePresence>
+                
               </motion.ul>
             </div>
           </motion.div>
@@ -129,13 +129,13 @@ const Header = () => {
           </motion.nav>
         </div>
       </div>
-      <div className={s.header_bg}>
+      <motion.div initial={{opacity:0, y:800}} transition={{stiffness:100}} animate={{opacity:1, y:0}} className={s.header_bg}>
         <div className="container">
-          <div className={s.welcome_text}>
+          <motion.div className={s.welcome_text} initial={{opacity:0, y:-800}} animate={{opacity:1, y:0}}>
             <h1>{t("Tanho cakega xush kelibsiz")}</h1>
-          </div>
+          </motion.div>
         </div>
-      </div>
+      </motion.div>
     </header>
   );
 };
